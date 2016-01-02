@@ -22,13 +22,16 @@ $('#favorites')
 		var id = evt.dataTransfer.getData('text'),
 			item = $('#' + id),
 			favList = $("#faves"),
-			prevFavItem = null;
+			prevFavItem = null,
+			deleteHtml = null;
 		var title = item.data().name,
 			value = parseInt(item.data().calory),
-			textValue = title + ' - ' + value + 'kcal';
+			deleteHtml = '<button class="destroy">x</button>',
+			textValue = title + ' - ' + value + 'kcal ' + deleteHtml,
+
 
 			prevFavItem = $('<li />', {
-				text: textValue,
+				html: textValue,
 				data : { id : id }
 			}).appendTo(favList);
 		$('#favorites').css('background-color','#A858A3');

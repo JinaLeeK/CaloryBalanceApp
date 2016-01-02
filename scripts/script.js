@@ -35,6 +35,7 @@ $(document).ready(function() {
 
   // consequeses for list changed
   $("#faves").bind('DOMSubtreeModified',function(e) {
+    startDestroyFunc();
     var valueSum = 0;
     $.each($("#faves li"), function(i, item) {
       var id = $(item).data().id;
@@ -42,9 +43,13 @@ $(document).ready(function() {
     })
     filterItems(valueCriteria - valueSum);
   });
-
 })
 
+function startDestroyFunc() {
+  $(".destroy").click(function() {
+    $(this).parents("li").remove();
+  });
+}
 function filterItems(theValue) {
   $.each($("#menu .menu"), function(i, item) {
     $item = $(item);
