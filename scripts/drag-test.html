@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <script src="./jquery-1.8.2.min.js"></script>
+</head>
+<body>
+  <div id="classic" class="panel">
+        <h1>Classics</h1>
+        <article id="menu" class="container post">
+          <div class="row">
+              <a class="inline-popups four columns" href="#popup-template"><img id="classic1" class="menu" src="#" width="94%" height="94%" draggable="true">test1</a>
+              <a class="inline-popups four columns" href="#popup-template"><img id="classic2" class="menu" src="#" width="94%" height="94%" draggable="true">test2</a>
+              <a class="inline-popups four columns" href="#popup-template"><img id="classic3" class="menu" src="#" width="94%" height="94%" draggable="true">test3</a>
+          </div>
+        </article>
+  </div>
+
+
+  <script>
+    $('#classic1').bind('dragstart', function (evt) {
+      console.log(this.id);
+    })
+  </script>
+</body>
+</html>

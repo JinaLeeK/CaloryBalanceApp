@@ -1,0 +1,87 @@
+/**Table of Contents
+------------------------------------------------
+- General Content
+- Typography
+- Header & Navigation
+- main content
+- Images & media
+- Footer
+- Media Queries
+------------------------------------------------*/
+
+/*General Content
+------------------------------------------------*/
+
+/*Typography
+------------------------------------------------*/
+.container {width: 95%;}
+#mainContent nav { text-align: right; }
+#mainContent nav a {
+  background: rgb(168, 88, 163);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.0em;
+  display: inline-block;
+  padding: 5px 10px;
+  border-color: rgb(0,0,0);
+  border: 5px solid;
+  text-decoration: none;
+}
+#mainContent nav a.selected {
+  background: rgba(168, 88, 163, 0.55);
+}
+/*.timeline nav a:first-child { border-left-width: 8px;}
+.timeline nav a:last-child { border-right-width: 8px; }
+.timeline nav a.selected { background-color: rgba(255,255,255,.55)}*/
+
+/*.timeline nav a {
+  color: #fff;
+  font-size: .9em;
+  display: inline-block;
+  padding: 5px 10px;
+  border-color: #fff;
+  border-style: solid;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 0;
+  border-top-width: 8px;
+  text-decoration: none;
+}*/
+
+
+/*Header & Navigation
+------------------------------------------------*/
+
+/*mainContent
+------------------------------------------------*/
+.menu {
+  margin-top: 18px;
+}
+#menu .menu:hover {
+  cursor: pointer;
+}
+
+.panel div {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.1em;
+  font-size: 1.0em;
+}
+.panel div .value {
+  color: rgba(93,7,7,0.8);
+  font-weight: bold;
+}
+/*Images & media
+------------------------------------------------*/
+img#classic5{
+  padding-top: 28px;
+}
+img#classic6 {
+  padding-top: 28px;
+}
+img#classic9 {
+  padding-top: 10px;
+}
+
+/*Footer
+------------------------------------------------*/

@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="scripts/jquery-1.8.2.min.js"></script>
+    <script src="http://platform.fatsecret.com/js?key=20cdb3c8827945939d2597722a493c83&auto_template=false"></script>
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/common.css" rel="stylesheet" media="screen, projection">
+  </head>
+
+  <body>
+    <a id="inline-popups"href="#template">Zoom</a>
+
+    <div id="template" class="white-popup mfp-with-anim mfp-hide">
+
+      <div class="holder">
+        <div class="title"><script>fatsecret.writeHolder("foodtitle");</script></div>
+        <script>fatsecret.writeHolder("nutritionpanel");</script>
+        <div id="container"></div>
+      </div>
+
+    </div>
+
+    <script src="scripts/jquery.magnific-popup.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        contentPopup();
+      });
+
+      function contentPopup() {
+        var s = document.createElement('script');
+        var scriptContent = "fatsecret.setContainer('container');";
+        scriptContent += 'fatsecret.setCanvas("food.get", {food_id:"60181"});';
+        s.innerHTML = scriptContent;
+
+        $("#template").append(s);
+
+        var timeOut = setInterval(function() {
+          if( $("#template").find(".fatsecret_nutritionpanel").length > 0 ) {
+              clearInterval(timeOut);
+              $("#template").html($("#template .fatsecret_nutritionpanel").html());
+              setPopup();
+            }
+          }, 100)
+      }
+
+      function setPopup() {
+          $("#inline-popups").magnificPopup({
+            mainClass: 'mfp-with-zoom',
+            removalDelay: 500,
+            midClick: true
+          })
+      }
+    </script>
+  </body>
+</html>
